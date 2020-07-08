@@ -58,7 +58,7 @@ foreach(l ${LibDwarf_LIBRARIES})
   # The library version number is stored in CMAKE_MATCH_1
   set(_cur_ver ${CMAKE_MATCH_1})
 
-  if(${_cur_ver} VERSION_GREATER ${_max_ver})
+  if(NOT ${_cur_ver} AND ${_cur_ver} VERSION_GREATER ${_max_ver})
     set(_max_ver ${_cur_ver})
     set(_max_ver_lib ${l})
   endif()
